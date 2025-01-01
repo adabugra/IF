@@ -5,7 +5,7 @@
     <parent>
         <artifactId>IF-parent</artifactId>
         <groupId>com.github.stefvanschie.inventoryframework</groupId>
-        <version>0.10.18-SNAPSHOT</version>
+        <version>0.10.19</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -181,7 +181,13 @@
         </dependency>
         <dependency>
             <groupId>com.github.stefvanschie.inventoryframework</groupId>
-            <artifactId>1_21_2</artifactId>
+            <artifactId>1_21_2-3</artifactId>
+            <version>${project.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.stefvanschie.inventoryframework</groupId>
+            <artifactId>1_21_4</artifactId>
             <version>${project.version}</version>
             <scope>compile</scope>
         </dependency>
@@ -232,7 +238,7 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.11.0</version>
+            <version>5.11.4</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -256,7 +262,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>3.2.5</version>
+                        <version>3.2.7</version>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
@@ -279,12 +285,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.2.5</version>
+                <version>3.5.2</version>
                 <dependencies>
                     <dependency>
                         <groupId>org.apache.maven.surefire</groupId>
                         <artifactId>surefire-junit-platform </artifactId>
-                        <version>3.2.5</version>
+                        <version>3.5.2</version>
                     </dependency>
                 </dependencies>
             </plugin>
@@ -328,7 +334,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.10.0</version>
+                <version>3.11.2</version>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>

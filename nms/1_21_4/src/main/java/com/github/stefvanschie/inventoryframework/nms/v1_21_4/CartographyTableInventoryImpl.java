@@ -1,9 +1,9 @@
-package com.github.stefvanschie.inventoryframework.nms.v1_21_2;
+package com.github.stefvanschie.inventoryframework.nms.v1_21_4;
 
 import com.github.stefvanschie.inventoryframework.abstraction.CartographyTableInventory;
 import com.github.stefvanschie.inventoryframework.adventuresupport.TextHolder;
-import com.github.stefvanschie.inventoryframework.nms.v1_21_2.util.CustomInventoryUtil;
-import com.github.stefvanschie.inventoryframework.nms.v1_21_2.util.TextHolderUtil;
+import com.github.stefvanschie.inventoryframework.nms.v1_21_4.util.CustomInventoryUtil;
+import com.github.stefvanschie.inventoryframework.nms.v1_21_4.util.TextHolderUtil;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ClientboundContainerSetContentPacket;
@@ -15,11 +15,11 @@ import net.minecraft.world.Container;
 import net.minecraft.world.inventory.CartographyTableMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.ItemStack;
-import org.bukkit.craftbukkit.v1_21_R2.entity.CraftPlayer;
-import org.bukkit.craftbukkit.v1_21_R2.inventory.CraftInventory;
-import org.bukkit.craftbukkit.v1_21_R2.inventory.CraftInventoryCartography;
-import org.bukkit.craftbukkit.v1_21_R2.inventory.CraftInventoryView;
-import org.bukkit.craftbukkit.v1_21_R2.inventory.CraftItemStack;
+import org.bukkit.craftbukkit.v1_21_R3.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_21_R3.inventory.CraftInventory;
+import org.bukkit.craftbukkit.v1_21_R3.inventory.CraftInventoryCartography;
+import org.bukkit.craftbukkit.v1_21_R3.inventory.CraftInventoryView;
+import org.bukkit.craftbukkit.v1_21_R3.inventory.CraftItemStack;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.InventoryHolder;
 import org.jetbrains.annotations.Contract;
@@ -29,9 +29,9 @@ import org.jetbrains.annotations.Nullable;
 import java.lang.reflect.Field;
 
 /**
- * Internal cartography table inventory for 1.21.2
+ * Internal cartography table inventory for 1.21.4
  *
- * @since 0.10.18
+ * @since 0.10.19
  */
 public class CartographyTableInventoryImpl extends CartographyTableInventory {
 
@@ -92,7 +92,7 @@ public class CartographyTableInventoryImpl extends CartographyTableInventory {
      *
      * @param nmsPlayer the player to get the container id for
      * @return the container id
-     * @since 0.10.18
+     * @since 0.10.19
      */
     @Contract(pure = true)
     private int getContainerId(@NotNull net.minecraft.world.entity.player.Player nmsPlayer) {
@@ -104,7 +104,7 @@ public class CartographyTableInventoryImpl extends CartographyTableInventory {
      *
      * @param serverPlayer the player to get the player connection from
      * @return the player connection
-     * @since 0.10.18
+     * @since 0.10.19
      */
     @NotNull
     @Contract(pure = true)
@@ -117,7 +117,7 @@ public class CartographyTableInventoryImpl extends CartographyTableInventory {
      *
      * @param player the player to get the server player from
      * @return the server player
-     * @since 0.10.18
+     * @since 0.10.19
      */
     @NotNull
     @Contract(pure = true)
@@ -128,7 +128,7 @@ public class CartographyTableInventoryImpl extends CartographyTableInventory {
     /**
      * A custom container cartography table
      *
-     * @since 0.10.18
+     * @since 0.10.19
      */
     private class ContainerCartographyTableImpl extends CartographyTableMenu {
 

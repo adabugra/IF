@@ -1,9 +1,9 @@
-package com.github.stefvanschie.inventoryframework.nms.v1_21_2;
+package com.github.stefvanschie.inventoryframework.nms.v1_21_4;
 
 import com.github.stefvanschie.inventoryframework.abstraction.GrindstoneInventory;
 import com.github.stefvanschie.inventoryframework.adventuresupport.TextHolder;
-import com.github.stefvanschie.inventoryframework.nms.v1_21_2.util.CustomInventoryUtil;
-import com.github.stefvanschie.inventoryframework.nms.v1_21_2.util.TextHolderUtil;
+import com.github.stefvanschie.inventoryframework.nms.v1_21_4.util.CustomInventoryUtil;
+import com.github.stefvanschie.inventoryframework.nms.v1_21_4.util.TextHolderUtil;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ClientboundContainerSetContentPacket;
@@ -16,9 +16,9 @@ import net.minecraft.world.inventory.GrindstoneMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
-import org.bukkit.craftbukkit.v1_21_R2.entity.CraftPlayer;
-import org.bukkit.craftbukkit.v1_21_R2.event.CraftEventFactory;
-import org.bukkit.craftbukkit.v1_21_R2.inventory.CraftItemStack;
+import org.bukkit.craftbukkit.v1_21_R3.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_21_R3.event.CraftEventFactory;
+import org.bukkit.craftbukkit.v1_21_R3.inventory.CraftItemStack;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
@@ -27,9 +27,9 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Internal grindstone inventory for 1.21.1
+ * Internal grindstone inventory for 1.21.4
  *
- * @since 0.10.18
+ * @since 0.10.19
  */
 public class GrindstoneInventoryImpl extends GrindstoneInventory {
 
@@ -104,7 +104,7 @@ public class GrindstoneInventoryImpl extends GrindstoneInventory {
      *
      * @param nmsPlayer the player to get the containerId id for
      * @return the containerId id
-     * @since 0.10.18
+     * @since 0.10.19
      * @deprecated no longer used internally
      */
     @Contract(pure = true)
@@ -118,7 +118,7 @@ public class GrindstoneInventoryImpl extends GrindstoneInventory {
      *
      * @param serverPlayer the player to get the player connection from
      * @return the player connection
-     * @since 0.10.18
+     * @since 0.10.19
      * @deprecated no longer used internally
      */
     @NotNull
@@ -133,7 +133,7 @@ public class GrindstoneInventoryImpl extends GrindstoneInventory {
      *
      * @param player the player to get the server player from
      * @return the server player
-     * @since 0.10.18
+     * @since 0.10.19
      */
     @NotNull
     @Contract(pure = true)
@@ -144,7 +144,7 @@ public class GrindstoneInventoryImpl extends GrindstoneInventory {
     /**
      * A custom container grindstone
      *
-     * @since 0.10.18
+     * @since 0.10.19
      */
     private static class ContainerGrindstoneImpl extends GrindstoneMenu {
 
@@ -153,7 +153,7 @@ public class GrindstoneInventoryImpl extends GrindstoneInventory {
          *
          * @param serverPlayer the player for whom this container should be opened
          * @param title the title of the gui
-         * @since 0.10.18
+         * @since 0.10.19
          */
         public ContainerGrindstoneImpl(@NotNull ServerPlayer serverPlayer, @NotNull Component title) {
             super(serverPlayer.nextContainerCounter(), serverPlayer.getInventory());
