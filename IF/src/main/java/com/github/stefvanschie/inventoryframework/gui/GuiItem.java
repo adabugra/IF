@@ -129,8 +129,9 @@ public class GuiItem {
         this.action = action;
         this.visible = true;
         this.properties = new ArrayList<>();
+        this.item = item;
 
-        this.item = item.clone();
+        //remove this call after the removal of InventoryComponent#setItem(ItemStack, int, int)
         applyUUID();
     }
 
@@ -190,13 +191,9 @@ public class GuiItem {
      */
     public void applyUUID() {
         ItemMeta meta = item.getItemMeta();
+
         if (meta != null) {
-            PersistentDataContainer container = meta.getPersistentDataContainer();
-
-            if (!container.has(keyUUID, UUIDTagType.INSTANCE)) {
-                container.set(this.keyUUID, UUIDTagType.INSTANCE, uuid);
-            }
-
+            meta.getPersistentDataContainer().set(this.keyUUID, UUIDTagType.INSTANCE, uuid);
             item.setItemMeta(meta);
         }
     }
@@ -208,9 +205,7 @@ public class GuiItem {
      * @since 0.10.8
      */
     public void setItem(@NotNull ItemStack item) {
-        this.item = item.clone();
-
-        applyUUID();
+        this.item = item;
     }
 
     /**
